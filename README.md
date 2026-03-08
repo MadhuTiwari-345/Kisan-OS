@@ -101,7 +101,9 @@ Intermediaries take large commissions, reducing farmer earnings.
 Crop transportation is poorly optimized, causing:
 
 • higher fuel costs
+
 • delays
+
 • food wastage
 
 
