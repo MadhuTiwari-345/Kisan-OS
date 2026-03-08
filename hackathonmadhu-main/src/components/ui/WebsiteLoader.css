@@ -1,0 +1,49 @@
+.loader-svg {
+  animation-duration: 3s;
+  -webkit-font-smoothing: antialiased;
+}
+
+.loader-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(72px);
+  opacity: 0.78;
+  animation: loader-float 10s ease-in-out infinite;
+}
+
+.loader-orb-a {
+  top: 12%;
+  left: 10%;
+  width: 16rem;
+  height: 16rem;
+  background: rgba(51, 204, 179, 0.28);
+}
+
+.loader-orb-b {
+  top: 18%;
+  right: 12%;
+  width: 18rem;
+  height: 18rem;
+  background: rgba(207, 64, 255, 0.2);
+  animation-delay: -3s;
+}
+
+.loader-orb-c {
+  bottom: 10%;
+  left: 38%;
+  width: 20rem;
+  height: 20rem;
+  background: rgba(201, 240, 163, 0.22);
+  animation-delay: -6s;
+}
+
+@keyframes loader-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, -20px, 0) scale(1.08);
+  }
+}

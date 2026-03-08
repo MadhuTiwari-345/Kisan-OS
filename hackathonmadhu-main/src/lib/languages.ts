@@ -1,0 +1,26 @@
+export const FARMER_LANGUAGES = [
+  { code: "as-IN", label: "Assamese" },
+  { code: "bn-IN", label: "Bengali" },
+  { code: "bodo-IN", label: "Bodo" },
+  { code: "dog-IN", label: "Dogri" },
+  { code: "gu-IN", label: "Gujarati" },
+  { code: "hi-IN", label: "Hindi" },
+  { code: "kn-IN", label: "Kannada" },
+  { code: "ks-IN", label: "Kashmiri" },
+  { code: "kok-IN", label: "Konkani" },
+  { code: "mai-IN", label: "Maithili" },
+  { code: "ml-IN", label: "Malayalam" },
+  { code: "mni-IN", label: "Manipuri" },
+  { code: "mr-IN", label: "Marathi" },
+  { code: "ne-IN", label: "Nepali" },
+  { code: "or-IN", label: "Odia" },
+  { code: "pa-IN", label: "Punjabi" },
+  { code: "sa-IN", label: "Sanskrit" },
+  { code: "sat-IN", label: "Santali" },
+  { code: "sd-IN", label: "Sindhi" },
+  { code: "ta-IN", label: "Tamil" },
+  { code: "te-IN", label: "Telugu" },
+  { code: "ur-IN", label: "Urdu" },
+] as const;
+
+export const ADMIN_LANGUAGES = [{ code: "en-IN", label: "English" }] as const;

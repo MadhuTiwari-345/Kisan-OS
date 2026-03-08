@@ -1,0 +1,230 @@
+version: "3.9"
+
+services:
+  # ============ DATABASE LAYER ============
+  postgres:
+    image: postgis/postgis:15-3.3
+    container_name: kisan_postgres
+    environment:
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-password}
+      POSTGRES_DB: ${DB_NAME:-kisan_os}
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init/postgres_init.sql:/docker-entrypoint-initdb.d/01_init.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - kisan_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-kisan_os}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ============ CACHE LAYER ============
+  redis:
+    image: redis:7-alpine
+    container_name: kisan_redis
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-kisan_redis_pass}
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - kisan_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ============ VECTOR DB FOR RAG ============
+  milvus:
+    image: milvusdb/milvus:latest
+    container_name: kisan_milvus
+    environment:
+      COMMON_STORAGETYPE: local
+      COMMON_PERSISTENCE_ENABLED: "true"
+    volumes:
+      - milvus_data:/var/lib/milvus
+    ports:
+      - "19530:19530"
+      - "9091:9091"
+    networks:
+      - kisan_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9091/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+
+  # ============ BACKEND SERVICES ============
+
+  # API Gateway & Main Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: kisan_backend
+    environment:
+      # App Configuration
+      APP_NAME: KISAN-OS
+      ENVIRONMENT: ${ENVIRONMENT:-development}
+      DEBUG: ${DEBUG:-false}
+      SECRET_KEY: ${SECRET_KEY:-change-me-in-production}
+      
+      # Database
+      DATABASE_URL: postgresql+asyncpg://${DB_USER:-postgres}:${DB_PASSWORD:-password}@postgres:5432/${DB_NAME:-kisan_os}
+      DATABASE_URL_SYNC: postgresql://${DB_USER:-postgres}:${DB_PASSWORD:-password}@postgres:5432/${DB_NAME:-kisan_os}
+      
+      # Redis
+      REDIS_URL: redis://:${REDIS_PASSWORD:-kisan_redis_pass}@redis:6379/0
+      
+      # Bhashini Voice API
+      BHASHINI_API_KEY: ${BHASHINI_API_KEY:-}
+      BHASHINI_USER_ID: ${BHASHINI_USER_ID:-}
+      
+      # Vector DB
+      MILVUS_HOST: milvus
+      MILVUS_PORT: 19530
+      
+      # External APIs
+      AGMARKNET_API_URL: https://agmarknet.gov.in
+      WEATHER_API_KEY: ${WEATHER_API_KEY:-}
+      
+      # ONDC Integration
+      ONDC_ENVIRONMENT: ${ONDC_ENVIRONMENT:-sandbox}
+      ONDC_BUYER_APP_ID: ${ONDC_BUYER_APP_ID:-}
+      ONDC_BUYER_APP_URL: ${ONDC_BUYER_APP_URL:-}
+      
+      # AWS S3
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-}
+      AWS_S3_BUCKET: ${AWS_S3_BUCKET:-kisan-os-storage}
+      AWS_REGION: ${AWS_REGION:-ap-south-1}
+      
+      # Logging
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    
+    volumes:
+      - ./backend:/app
+      - ./models:/models
+      - ./logs:/logs
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      milvus:
+        condition: service_healthy
+    networks:
+      - kisan_network
+    command: >
+      sh -c "
+        pip install -r requirements.txt &&
+        uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+      "
+    restart: unless-stopped
+
+  # ============ FRONTEND ============
+  frontend:
+    build:
+      context: ./hackathonmadhu-main
+      dockerfile: Dockerfile
+    container_name: kisan_frontend
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL:-http://localhost:8000}
+      NODE_ENV: ${NODE_ENV:-development}
+    volumes:
+      - ./hackathonmadhu-main:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - kisan_network
+    restart: unless-stopped
+
+  # ============ MONITORING & OBSERVABILITY ============
+
+  # Prometheus for metrics collection
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: kisan_prometheus
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    networks:
+      - kisan_network
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+    restart: unless-stopped
+
+  # Grafana for visualization
+  grafana:
+    image: grafana/grafana:latest
+    container_name: kisan_grafana
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-admin}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/dashboards:/etc/grafana/dashboards:ro
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+    ports:
+      - "3001:3000"
+    depends_on:
+      - prometheus
+    networks:
+      - kisan_network
+    restart: unless-stopped
+
+  # ============ DEVELOPMENT TOOLS ============
+
+  # pgAdmin for database administration
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: kisan_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL:-admin@kisan-os.com}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - kisan_network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  milvus_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+  pgadmin_data:
+    driver: local
+
+networks:
+  kisan_network:
+    driver: bridge

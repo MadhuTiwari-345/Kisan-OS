@@ -1,0 +1,52 @@
+{
+  "name": "KISAN-OS",
+  "short_name": "KISAN-OS",
+  "description": "Voice-powered intelligence for every farmer - Market prices, logistics, AI advisory in your language",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#33ccb3",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["agriculture", "business", "productivity"],
+  "lang": "en",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Market Prices",
+      "short_name": "Market",
+      "description": "Check today's mandi prices",
+      "url": "/market"
+    },
+    {
+      "name": "Transport",
+      "short_name": "Transport",
+      "description": "Book transport for your produce",
+      "url": "/logistics"
+    },
+    {
+      "name": "AI Advisor",
+      "short_name": "Advisor",
+      "description": "Get AI-powered farming advice",
+      "url": "/advisory"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
+}
