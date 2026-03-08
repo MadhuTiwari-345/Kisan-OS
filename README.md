@@ -1,6 +1,3 @@
-
-
-````md
 # 🌾 Smart Agri Supply Chain Platform
 
 > AI-powered digital marketplace and logistics platform connecting **farmers, mandis, buyers, and transporters** to create a transparent and efficient agricultural supply chain.
@@ -8,21 +5,13 @@
 <p align="center">
 
 <img src="https://img.shields.io/badge/Framework-Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/>
-
 <img src="https://img.shields.io/badge/Language-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
-
 <img src="https://img.shields.io/badge/Backend-Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-
 <img src="https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"/>
-
 <img src="https://img.shields.io/badge/AI-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
-
 <img src="https://img.shields.io/badge/Style-TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
-
 <img src="https://img.shields.io/badge/State-Zustand-FF6B6B?style=for-the-badge"/>
-
 <img src="https://img.shields.io/badge/Deployment-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
-
 <img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge&logo=open-source-initiative&logoColor=white"/>
 
 </p>
@@ -37,10 +26,10 @@ Farmers often rely on intermediaries, resulting in **reduced profits and delayed
 
 This project introduces an **AI-powered agricultural supply chain platform** that connects:
 
-• Farmers  
-• Buyers  
-• Mandis  
-• Logistics providers  
+- Farmers  
+- Buyers  
+- Mandis  
+- Logistics providers  
 
 The system enables:
 
@@ -54,12 +43,13 @@ The goal is to **increase farmer profits, reduce wastage, and optimize agricultu
 
 ---
 
-# 🎥 Demo & Pitch Video
+# 🎥 Demo & Pitch Video & ppt
 
-| Video | Link |
-|------|------|
-| 🎬 **Platform Demo Walkthrough** | https://drive.google.com/YOUR_DEMO_LINK |
-| 🎤 **Hackathon Pitch Presentation** | https://drive.google.com/YOUR_PITCH_LINK |
+```
+
+https://drive.google.com/drive/folders/1d6ZiSBFIIHAMjjDXJ_Ye3EEsGqFvTbsU?usp=sharing
+
+```
 
 The videos demonstrate:
 
@@ -85,9 +75,9 @@ Intermediaries take large commissions, reducing farmer earnings.
 ### 3️⃣ Inefficient Logistics
 Crop transportation is poorly optimized causing:
 
-• higher fuel costs  
-• delays  
-• food wastage  
+- Higher fuel costs  
+- Delivery delays  
+- Food wastage  
 
 ### 4️⃣ Lack of Demand Prediction
 Farmers do not know which crops will have higher demand next season.
@@ -103,12 +93,12 @@ This platform provides a **digital ecosystem for agricultural trade and logistic
 
 Key capabilities:
 
-• Crop marketplace for farmers and buyers  
-• AI-based mandi price prediction  
-• Smart logistics route optimization  
-• Crop demand forecasting  
-• Real-time analytics dashboard  
-• Transparent digital transactions  
+- Crop marketplace for farmers and buyers  
+- AI-based mandi price prediction  
+- Smart logistics route optimization  
+- Crop demand forecasting  
+- Real-time analytics dashboard  
+- Transparent digital transactions  
 
 This ensures **fair pricing, efficient supply chains, and data-driven farming decisions**.
 
@@ -120,10 +110,10 @@ This ensures **fair pricing, efficient supply chains, and data-driven farming de
 
 Farmers can:
 
-• Register and verify their profiles  
-• Add farm details  
-• List crops for sale  
-• Track orders and payments  
+- Register and verify their profiles  
+- Add farm details  
+- List crops for sale  
+- Track orders and payments  
 
 ---
 
@@ -131,16 +121,16 @@ Farmers can:
 
 Buyers can:
 
-• browse crop listings  
-• view real-time mandi prices  
-• place bids or purchase crops  
+- Browse crop listings  
+- View real-time mandi prices  
+- Place bids or purchase crops  
 
 Marketplace features:
 
-• crop listings  
-• bidding system  
-• price comparison  
-• transparent transactions  
+- Crop listings  
+- Bidding system  
+- Price comparison  
+- Transparent transactions  
 
 ---
 
@@ -150,15 +140,15 @@ The platform uses route optimization algorithms to reduce transportation costs.
 
 Features:
 
-• pickup scheduling  
-• transport tracking  
-• optimized routes (Milk Run logistics)
+- Pickup scheduling  
+- Transport tracking  
+- Optimized routes (Milk Run logistics)
 
 Benefits:
 
-• lower transportation cost  
-• faster delivery  
-• reduced crop wastage  
+- Lower transportation cost  
+- Faster delivery  
+- Reduced crop wastage  
 
 ---
 
@@ -166,11 +156,11 @@ Benefits:
 
 Machine learning models predict mandi prices using:
 
-• crop type  
-• location  
-• seasonal demand  
-• historical prices  
-• weather data  
+- Crop type  
+- Location  
+- Seasonal demand  
+- Historical prices  
+- Weather data  
 
 Farmers receive **recommended selling prices**.
 
@@ -182,9 +172,9 @@ AI predicts upcoming crop demand using historical agricultural data.
 
 Farmers can decide:
 
-• what crop to grow  
-• when to sell  
-• which mandi offers better prices  
+- What crop to grow  
+- When to sell  
+- Which mandi offers better prices  
 
 ---
 
@@ -192,11 +182,11 @@ Farmers can decide:
 
 Admins can monitor:
 
-• crop sales  
-• farmer registrations  
-• market trends  
-• logistics performance  
-• revenue analytics  
+- Crop sales  
+- Farmer registrations  
+- Market trends  
+- Logistics performance  
+- Revenue analytics  
 
 ---
 
@@ -206,25 +196,20 @@ Admins can monitor:
 flowchart LR
 
 Farmer[Farmer Registers] --> FarmProfile[Create Farm Profile]
-
 FarmProfile --> CropListing[Add Crop Listing]
-
 CropListing --> Marketplace[Marketplace Listing]
 
 Buyer[Buyer Browses Marketplace] --> Marketplace
 
 Marketplace --> OrderPlaced[Buyer Places Order]
-
 OrderPlaced --> Payment[Payment Processing]
 
 Payment --> Logistics[Logistics Scheduling]
-
 Logistics --> Transport[Transport Pickup]
 
 Transport --> Delivery[Crop Delivered to Buyer]
-
 Delivery --> Analytics[Update Analytics Dashboard]
-````
+```
 
 ---
 
@@ -232,66 +217,70 @@ Delivery --> Analytics[Update Analytics Dashboard]
 
 ## Frontend
 
-• Next.js
-• TypeScript
-• Tailwind CSS
-• Zustand
-• Chart.js
-• Framer Motion
+- Next.js  
+- TypeScript  
+- Tailwind CSS  
+- Zustand  
+- Chart.js  
+- Framer Motion  
 
 ---
 
 ## Backend
 
-• Node.js
-• NestJS / Express
-• REST APIs
-• JWT Authentication
+- Node.js  
+- NestJS / Express  
+- REST APIs  
+- JWT Authentication  
 
 ---
 
 ## AI / ML Services
 
-• FastAPI
-• Scikit-learn
-• Pandas
-• NumPy
+- FastAPI  
+- Scikit-learn  
+- Pandas  
+- NumPy  
 
 ---
 
 ## Database
 
-• PostgreSQL
-• Prisma ORM
+- PostgreSQL  
+- Prisma ORM  
 
 ---
 
 ## DevOps
 
-• Docker
-• GitHub Actions
-• Vercel / AWS / Render
+- Docker  
+- GitHub Actions  
+- Vercel / AWS / Render  
 
 ---
 
 # ⚙ Installation
 
-## Clone repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/yourusername/agri-supply-chain-platform.git
 cd agri-supply-chain-platform
 ```
 
-## Install dependencies
+---
+
+## Install Dependencies
 
 ```bash
 npm install
 ```
 
-## Configure environment
+---
 
-Create `.env`
+## Configure Environment Variables
+
+Create a `.env` file:
 
 ```env
 DATABASE_URL=postgresql://user:password@localhost:5432/agri
@@ -299,13 +288,17 @@ JWT_SECRET=your_secret_key
 REDIS_URL=redis://localhost:6379
 ```
 
-## Run migrations
+---
+
+## Run Database Migrations
 
 ```bash
 npx prisma migrate dev
 ```
 
-## Start server
+---
+
+## Start Development Server
 
 ```bash
 npm run dev
@@ -321,29 +314,31 @@ http://localhost:3000
 
 # 🚀 Deployment
 
-Frontend
+## Frontend
 
-• Vercel
+- Vercel
 
-Backend
+## Backend
 
-• AWS EC2
-• Render
-• Railway
+- AWS EC2  
+- Render  
+- Railway  
 
-Database
+## Database
 
-• PostgreSQL
+- PostgreSQL  
 
 ---
 
 # 📊 Future Enhancements
 
-• blockchain crop traceability
-• satellite crop monitoring
-• IoT farm sensors
-• voice assistant for farmers
-• WhatsApp chatbot for mandi prices
+Planned features:
+
+- Blockchain crop traceability  
+- Satellite crop monitoring  
+- IoT farm sensors  
+- Voice assistant for farmers  
+- WhatsApp chatbot for crop price queries  
 
 ---
 
@@ -352,39 +347,45 @@ Database
 Steps:
 
 ```
-Fork repository
-Create branch
-Commit changes
-Open pull request
+Fork the repository
+Create a new branch
+Commit your changes
+Submit a pull request
 ```
+
+Please ensure:
+
+- Clean code  
+- Proper documentation  
+- Passing tests  
 
 ---
 
 # 📜 License
 
-Licensed under **MIT License**
+This project is licensed under the **MIT License**.
 
 ---
 
 # 👨‍💻 Contributors
 
-Madhu Tiwari
-Team Loner
+- Madhu Tiwari  
+- Team Loner  
 
 ---
 
 # ⭐ Support
 
-⭐ Star the repository
-🐛 Report issues
-💡 Suggest improvements
+If you find this project helpful:
+
+⭐ Star the repository  
+🐛 Report issues  
+💡 Suggest improvements  
 
 ---
 
 # 🌍 Impact
 
-This platform aims to build **a fair, transparent, and efficient agricultural marketplace** empowering farmers with data-driven insights and modern technology.
+This platform aims to build **a fair, transparent, and efficient agricultural marketplace**, empowering farmers with technology and data-driven insights.
 
-```
-
-
+---
