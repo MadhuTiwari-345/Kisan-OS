@@ -40,6 +40,13 @@ https://docs.google.com/presentation/d/18rw6biLF1mfj_guoatpNuxJvU_sgDwxj/edit?us
 https://github.com/MadhuTiwari-345/Kisan-OS
 
 ```
+
+#Deployment Link
+
+```
+https://kisanosprojectcheck.vercel.app
+```
+
 ---
 
 # 🚀 Overview
@@ -51,16 +58,23 @@ Farmers often rely on intermediaries, resulting in **reduced profits and delayed
 This project introduces an **AI-powered agricultural supply chain platform** that connects:
 
 • Farmers
+
 • Buyers
+
 • Mandis
+
 • Logistics providers
 
 The system enables:
 
 ✔ Transparent crop marketplaces
+
 ✔ AI-powered price prediction
+
 ✔ Demand forecasting
+
 ✔ Logistics route optimization
+
 ✔ Real-time analytics
 
 The goal is to **increase farmer profits, reduce wastage, and optimize agricultural supply chains**.
@@ -71,13 +85,16 @@ The goal is to **increase farmer profits, reduce wastage, and optimize agricultu
 
 Current agricultural systems face multiple challenges.
 
+
 ### 1️⃣ Lack of Price Transparency
 
 Farmers often do not know the **true market price of crops**.
 
+
 ### 2️⃣ Middlemen Exploitation
 
 Intermediaries take large commissions, reducing farmer earnings.
+
 
 ### 3️⃣ Inefficient Logistics
 
@@ -87,9 +104,11 @@ Crop transportation is poorly optimized, causing:
 • delays
 • food wastage
 
+
 ### 4️⃣ Lack of Demand Prediction
 
 Farmers do not know which crops will have higher demand next season.
+
 
 ### 5️⃣ Fragmented Agricultural Data
 
@@ -104,10 +123,15 @@ This platform provides a **digital ecosystem for agricultural trade and logistic
 Key capabilities include:
 
 • Crop marketplace for farmers and buyers
+
 • AI-based mandi price prediction
+
 • Smart logistics route optimization
+
 • Crop demand forecasting
+
 • Real-time analytics dashboard
+
 • Transparent digital transactions
 
 This ensures **fair pricing, efficient supply chains, and data-driven farming decisions**.
@@ -121,8 +145,11 @@ This ensures **fair pricing, efficient supply chains, and data-driven farming de
 Farmers can:
 
 • Register and verify profiles
+
 • Add farm details
+
 • List crops for sale
+
 • Track orders and payments
 
 ---
@@ -132,14 +159,19 @@ Farmers can:
 Buyers can:
 
 • browse crop listings
+
 • view real-time mandi prices
+
 • place bids or purchase crops
 
 Marketplace features include:
 
 • crop listings
+
 • bidding system
+
 • price comparison
+
 • transparent transactions
 
 ---
@@ -151,13 +183,17 @@ The platform uses route optimization algorithms to reduce transportation costs.
 Features include:
 
 • pickup scheduling
+
 • transport tracking
+
 • optimized routes (Milk Run logistics)
 
 Benefits:
 
 • lower transportation cost
+
 • faster delivery
+
 • reduced crop wastage
 
 ---
@@ -167,9 +203,13 @@ Benefits:
 Machine learning models predict mandi prices based on:
 
 • crop type
+
 • location
+
 • seasonal demand
+
 • historical prices
+
 • weather data
 
 Farmers receive **recommended selling prices**.
@@ -183,7 +223,9 @@ AI predicts upcoming crop demand using historical agricultural data.
 Farmers can decide:
 
 • what crop to grow
+
 • when to sell
+
 • which mandi offers better prices
 
 ---
@@ -193,9 +235,13 @@ Farmers can decide:
 Admins and stakeholders can monitor:
 
 • crop sales
+
 • farmer registrations
+
 • market trends
+
 • logistics performance
+
 • revenue analytics
 
 ---
@@ -205,14 +251,19 @@ Admins and stakeholders can monitor:
 Secure authentication using:
 
 • JWT tokens
+
 • encrypted passwords
+
 • role-based access control
 
 User roles:
 
 • Admin
+
 • Farmer
+
 • Buyer
+
 • Logistics provider
 
 ---
@@ -270,10 +321,15 @@ Delivery --> Analytics[Update Analytics Dashboard]
 ## Frontend
 
 • Next.js
+
 • TypeScript
+
 • Tailwind CSS
+
 • Zustand
+
 • Chart.js
+
 • Framer Motion
 
 ---
@@ -281,8 +337,11 @@ Delivery --> Analytics[Update Analytics Dashboard]
 ## Backend
 
 • Node.js
+
 • Express / NestJS
+
 • REST APIs
+
 • JWT Authentication
 
 ---
@@ -403,11 +462,30 @@ npm run test
 The demo shows:
 
 1️⃣ Farmer registration
+
 2️⃣ Crop marketplace
+
 3️⃣ Buyer purchasing crops
+
 4️⃣ Logistics optimization
+
 5️⃣ AI price prediction
+
 6️⃣ Analytics dashboard
+
+<img width="1356" height="595" alt="image" src="https://github.com/user-attachments/assets/f622e17b-8562-466d-95e3-3fdcdaeed6b3" />
+<img width="1356" height="529" alt="image" src="https://github.com/user-attachments/assets/5f9b9f7e-9111-4775-a138-a1d55f4f7c53" />
+<img width="1356" height="590" alt="image" src="https://github.com/user-attachments/assets/128eda06-bb6d-4bd0-97b7-165c2a54cfe9" />
+<img width="1355" height="536" alt="image" src="https://github.com/user-attachments/assets/a992e761-effe-4f29-8659-48df2c59953a" />
+<img width="1356" height="533" alt="image" src="https://github.com/user-attachments/assets/36d53689-706f-436c-b783-1f1e25bf5256" />
+<img width="674" height="501" alt="image" src="https://github.com/user-attachments/assets/4e364f5c-58e6-4791-b5e4-4cbdf1606808" />
+<img width="1355" height="528" alt="image" src="https://github.com/user-attachments/assets/b3284e60-58e0-48b1-ab41-f6d77050543c" />
+<img width="1356" height="521" alt="image" src="https://github.com/user-attachments/assets/2fbbad92-9617-49f3-8da8-437791490d21" />
+<img width="1352" height="523" alt="image" src="https://github.com/user-attachments/assets/e05cd1cf-b6c2-4644-9c22-45e99e362d5b" />
+<img width="1351" height="487" alt="image" src="https://github.com/user-attachments/assets/0c9dd72a-c0f1-4f13-b1a3-f614ea0f81c7" />
+<img width="1356" height="529" alt="image" src="https://github.com/user-attachments/assets/5b7fcbc2-ac84-4610-8a64-9dfcb67fa7b0" />
+<img width="1356" height="582" alt="image" src="https://github.com/user-attachments/assets/8ece1c6e-0ca4-4ea3-a979-f38e9352f8db" />
+
 
 🎬 Demo Video
 
