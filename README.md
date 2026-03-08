@@ -1,3 +1,5 @@
+
+
 # 🌾 Smart Agri Supply Chain Platform
 
 > AI-powered digital marketplace and logistics platform connecting **farmers, mandis, buyers, and transporters** to create a transparent and efficient agricultural supply chain.
@@ -18,6 +20,28 @@
 
 ---
 
+# 🔗 Quick Links
+
+🎥 **Demo Video**
+
+```
+https://docs.google.com/presentation/d/18rw6biLF1mfj_guoatpNuxJvU_sgDwxj/edit?usp=sharing&ouid=112780043208747336708&rtpof=true&sd=true
+```
+
+📊 **Pitch Deck**
+
+```
+https://docs.google.com/presentation/d/18rw6biLF1mfj_guoatpNuxJvU_sgDwxj/edit?usp=drive_link&ouid=112780043208747336708&rtpof=true&sd=true
+
+```
+💻 **GitHub Repository**
+
+```
+https://github.com/MadhuTiwari-345/Kisan-OS
+
+```
+---
+
 # 🚀 Overview
 
 Agriculture supply chains in many regions suffer from **price manipulation, inefficient logistics, lack of transparency, and unpredictable crop demand**.
@@ -26,64 +50,50 @@ Farmers often rely on intermediaries, resulting in **reduced profits and delayed
 
 This project introduces an **AI-powered agricultural supply chain platform** that connects:
 
-- Farmers  
-- Buyers  
-- Mandis  
-- Logistics providers  
+• Farmers
+• Buyers
+• Mandis
+• Logistics providers
 
 The system enables:
 
-✔ Transparent crop marketplaces  
-✔ AI-powered price prediction  
-✔ Demand forecasting  
-✔ Logistics route optimization  
-✔ Real-time analytics  
+✔ Transparent crop marketplaces
+✔ AI-powered price prediction
+✔ Demand forecasting
+✔ Logistics route optimization
+✔ Real-time analytics
 
 The goal is to **increase farmer profits, reduce wastage, and optimize agricultural supply chains**.
 
 ---
 
-# 🎥 Demo & Pitch Video & ppt
-
-```
-
-https://drive.google.com/drive/folders/1d6ZiSBFIIHAMjjDXJ_Ye3EEsGqFvTbsU?usp=sharing
-
-```
-
-The videos demonstrate:
-
-1️⃣ Farmer registration  
-2️⃣ Crop listing marketplace  
-3️⃣ Buyer purchasing crops  
-4️⃣ Logistics optimization  
-5️⃣ AI price prediction  
-6️⃣ Analytics dashboard  
-
----
-
 # 🎯 Problem Statement
 
-Current agricultural systems face multiple challenges:
+Current agricultural systems face multiple challenges.
 
 ### 1️⃣ Lack of Price Transparency
+
 Farmers often do not know the **true market price of crops**.
 
 ### 2️⃣ Middlemen Exploitation
+
 Intermediaries take large commissions, reducing farmer earnings.
 
 ### 3️⃣ Inefficient Logistics
-Crop transportation is poorly optimized causing:
 
-- Higher fuel costs  
-- Delivery delays  
-- Food wastage  
+Crop transportation is poorly optimized, causing:
+
+• higher fuel costs
+• delays
+• food wastage
 
 ### 4️⃣ Lack of Demand Prediction
+
 Farmers do not know which crops will have higher demand next season.
 
-### 5️⃣ Fragmented Data
-Agricultural data exists across multiple systems and is difficult to analyze.
+### 5️⃣ Fragmented Agricultural Data
+
+Agricultural data exists across multiple disconnected systems.
 
 ---
 
@@ -91,14 +101,14 @@ Agricultural data exists across multiple systems and is difficult to analyze.
 
 This platform provides a **digital ecosystem for agricultural trade and logistics powered by AI**.
 
-Key capabilities:
+Key capabilities include:
 
-- Crop marketplace for farmers and buyers  
-- AI-based mandi price prediction  
-- Smart logistics route optimization  
-- Crop demand forecasting  
-- Real-time analytics dashboard  
-- Transparent digital transactions  
+• Crop marketplace for farmers and buyers
+• AI-based mandi price prediction
+• Smart logistics route optimization
+• Crop demand forecasting
+• Real-time analytics dashboard
+• Transparent digital transactions
 
 This ensures **fair pricing, efficient supply chains, and data-driven farming decisions**.
 
@@ -110,10 +120,10 @@ This ensures **fair pricing, efficient supply chains, and data-driven farming de
 
 Farmers can:
 
-- Register and verify their profiles  
-- Add farm details  
-- List crops for sale  
-- Track orders and payments  
+• Register and verify profiles
+• Add farm details
+• List crops for sale
+• Track orders and payments
 
 ---
 
@@ -121,16 +131,16 @@ Farmers can:
 
 Buyers can:
 
-- Browse crop listings  
-- View real-time mandi prices  
-- Place bids or purchase crops  
+• browse crop listings
+• view real-time mandi prices
+• place bids or purchase crops
 
-Marketplace features:
+Marketplace features include:
 
-- Crop listings  
-- Bidding system  
-- Price comparison  
-- Transparent transactions  
+• crop listings
+• bidding system
+• price comparison
+• transparent transactions
 
 ---
 
@@ -138,29 +148,29 @@ Marketplace features:
 
 The platform uses route optimization algorithms to reduce transportation costs.
 
-Features:
+Features include:
 
-- Pickup scheduling  
-- Transport tracking  
-- Optimized routes (Milk Run logistics)
+• pickup scheduling
+• transport tracking
+• optimized routes (Milk Run logistics)
 
 Benefits:
 
-- Lower transportation cost  
-- Faster delivery  
-- Reduced crop wastage  
+• lower transportation cost
+• faster delivery
+• reduced crop wastage
 
 ---
 
 ## 🤖 AI Price Prediction
 
-Machine learning models predict mandi prices using:
+Machine learning models predict mandi prices based on:
 
-- Crop type  
-- Location  
-- Seasonal demand  
-- Historical prices  
-- Weather data  
+• crop type
+• location
+• seasonal demand
+• historical prices
+• weather data
 
 Farmers receive **recommended selling prices**.
 
@@ -172,21 +182,38 @@ AI predicts upcoming crop demand using historical agricultural data.
 
 Farmers can decide:
 
-- What crop to grow  
-- When to sell  
-- Which mandi offers better prices  
+• what crop to grow
+• when to sell
+• which mandi offers better prices
 
 ---
 
 ## 📈 Analytics Dashboard
 
-Admins can monitor:
+Admins and stakeholders can monitor:
 
-- Crop sales  
-- Farmer registrations  
-- Market trends  
-- Logistics performance  
-- Revenue analytics  
+• crop sales
+• farmer registrations
+• market trends
+• logistics performance
+• revenue analytics
+
+---
+
+## 🔐 Secure Authentication
+
+Secure authentication using:
+
+• JWT tokens
+• encrypted passwords
+• role-based access control
+
+User roles:
+
+• Admin
+• Farmer
+• Buyer
+• Logistics provider
 
 ---
 
@@ -203,12 +230,37 @@ Buyer[Buyer Browses Marketplace] --> Marketplace
 
 Marketplace --> OrderPlaced[Buyer Places Order]
 OrderPlaced --> Payment[Payment Processing]
-
 Payment --> Logistics[Logistics Scheduling]
-Logistics --> Transport[Transport Pickup]
 
+Logistics --> Transport[Transport Pickup]
 Transport --> Delivery[Crop Delivered to Buyer]
+
 Delivery --> Analytics[Update Analytics Dashboard]
+```
+
+---
+
+# 🏗 System Architecture
+
+```
+                   Users
+                     │
+               Next.js Frontend
+                     │
+                API Gateway
+                     │
+        ┌────────────┴────────────┐
+        │                         │
+    Backend Services         AI Services
+      (Node.js)               (Python)
+        │                         │
+        └────────────┬────────────┘
+                     │
+                PostgreSQL
+                     │
+                  Redis
+                     │
+                Object Storage
 ```
 
 ---
@@ -217,72 +269,96 @@ Delivery --> Analytics[Update Analytics Dashboard]
 
 ## Frontend
 
-- Next.js  
-- TypeScript  
-- Tailwind CSS  
-- Zustand  
-- Chart.js  
-- Framer Motion  
+• Next.js
+• TypeScript
+• Tailwind CSS
+• Zustand
+• Chart.js
+• Framer Motion
 
 ---
 
 ## Backend
 
-- Node.js  
-- NestJS / Express  
-- REST APIs  
-- JWT Authentication  
+• Node.js
+• Express / NestJS
+• REST APIs
+• JWT Authentication
 
 ---
 
 ## AI / ML Services
 
-- FastAPI  
-- Scikit-learn  
-- Pandas  
-- NumPy  
+• FastAPI
+• Scikit-learn
+• Pandas
+• NumPy
 
 ---
 
 ## Database
 
-- PostgreSQL  
-- Prisma ORM  
+• PostgreSQL
+• Prisma ORM
+
+---
+
+## Caching
+
+• Redis
 
 ---
 
 ## DevOps
 
-- Docker  
-- GitHub Actions  
-- Vercel / AWS / Render  
+• Docker
+• GitHub Actions
+• Vercel / AWS / Render
 
 ---
 
-# ⚙ Installation
+# 📂 Project Structure
 
-## Clone Repository
-
-```bash
-git clone https://github.com/yourusername/agri-supply-chain-platform.git
-cd agri-supply-chain-platform
+```
+Kisan-OS
+│
+├── frontend
+│
+├── backend
+│
+├── ai-services
+│
+├── database
+│
+└── docs
 ```
 
 ---
 
-## Install Dependencies
+# ⚙ Installation Guide
 
-```bash
+### 1️⃣ Clone the repository
+
+```
+git clone https://github.com/MadhuTiwari-345/Kisan-OS.git
+cd Kisan-OS
+```
+
+---
+
+### 2️⃣ Install dependencies
+
+```
 npm install
 ```
 
 ---
 
-## Configure Environment Variables
+### 3️⃣ Configure environment variables
 
-Create a `.env` file:
+Create `.env`
 
-```env
+```
 DATABASE_URL=postgresql://user:password@localhost:5432/agri
 JWT_SECRET=your_secret_key
 REDIS_URL=redis://localhost:6379
@@ -290,17 +366,17 @@ REDIS_URL=redis://localhost:6379
 
 ---
 
-## Run Database Migrations
+### 4️⃣ Run database migrations
 
-```bash
+```
 npx prisma migrate dev
 ```
 
 ---
 
-## Start Development Server
+### 5️⃣ Start development server
 
-```bash
+```
 npm run dev
 ```
 
@@ -312,52 +388,74 @@ http://localhost:3000
 
 ---
 
+# 🧪 Testing
+
+Run tests using:
+
+```
+npm run test
+```
+
+---
+
+# 🎥 Demo Video
+
+The demo shows:
+
+1️⃣ Farmer registration
+2️⃣ Crop marketplace
+3️⃣ Buyer purchasing crops
+4️⃣ Logistics optimization
+5️⃣ AI price prediction
+6️⃣ Analytics dashboard
+
+🎬 Demo Video
+
+```
+https://drive.google.com/file/d/1VL_6diwuvgJXVtzo2ry7VsN2RllnzcaD/view?usp=sharing
+
+```
+---
+
+# 📊 Pitch Deck
+
+Project presentation explaining:
+
+• problem statement
+• solution architecture
+• AI system
+• business impact
+
+📂 Pitch Deck
+
+```
+https://docs.google.com/presentation/d/18rw6biLF1mfj_guoatpNuxJvU_sgDwxj/edit?usp=sharing&ouid=112780043208747336708&rtpof=true&sd=true
+
+```
+---
+
 # 🚀 Deployment
 
-## Frontend
+Frontend can be deployed using:
 
-- Vercel
+• Vercel
 
-## Backend
+Backend can be deployed using:
 
-- AWS EC2  
-- Render  
-- Railway  
+• Render
+• Railway
+• AWS EC2
 
-## Database
+Database:
 
-- PostgreSQL  
-
----
-
-# 📊 Future Enhancements
-
-Planned features:
-
-- Blockchain crop traceability  
-- Satellite crop monitoring  
-- IoT farm sensors  
-- Voice assistant for farmers  
-- WhatsApp chatbot for crop price queries  
+• PostgreSQL
 
 ---
 
-# 🤝 Contributing
+# 👨‍💻 Contributors
 
-Steps:
-
-```
-Fork the repository
-Create a new branch
-Commit your changes
-Submit a pull request
-```
-
-Please ensure:
-
-- Clean code  
-- Proper documentation  
-- Passing tests  
+• Madhu Tiwari
+• Team Loner
 
 ---
 
@@ -367,20 +465,13 @@ This project is licensed under the **MIT License**.
 
 ---
 
-# 👨‍💻 Contributors
-
-- Madhu Tiwari  
-- Team Loner  
-
----
-
 # ⭐ Support
 
-If you find this project helpful:
+If you find this project useful:
 
-⭐ Star the repository  
-🐛 Report issues  
-💡 Suggest improvements  
+⭐ Star the repository
+🐛 Report issues
+💡 Suggest improvements
 
 ---
 
@@ -389,3 +480,4 @@ If you find this project helpful:
 This platform aims to build **a fair, transparent, and efficient agricultural marketplace**, empowering farmers with technology and data-driven insights.
 
 ---
+
