@@ -521,7 +521,9 @@ Frontend can be deployed using:
 Backend can be deployed using:
 
 • Render
+
 • Railway
+
 • AWS EC2
 
 Database:
@@ -548,7 +550,9 @@ This project is licensed under the **MIT License**.
 If you find this project useful:
 
 ⭐ Star the repository
+
 🐛 Report issues
+
 💡 Suggest improvements
 
 ---
