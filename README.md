@@ -1,6 +1,6 @@
 
 
-# 🌾 Smart Agri Supply Chain Platform
+# 🌾 Smart Agri Supply Chain Platform - Kisan OS
 
 > AI-powered digital marketplace and logistics platform connecting **farmers, mandis, buyers, and transporters** to create a transparent and efficient agricultural supply chain.
 
